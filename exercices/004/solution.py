@@ -7,7 +7,3 @@ Created on Mon Sep 22 12:20:52 2014
 import sys
 
 print(sys.argv[0])
-
-
-
-

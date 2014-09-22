@@ -6,6 +6,3 @@ Created on Mon Sep 22 13:28:44 2014
 """
 
 print(["hello world",42])
-
-
-
