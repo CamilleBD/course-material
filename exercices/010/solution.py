@@ -6,4 +6,4 @@ Created on Mon Sep 22 14:54:39 2014
 """
 word="Hello World!"
 for i in range(100):
-    print(word) 
+    print(word)

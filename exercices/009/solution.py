@@ -4,7 +4,6 @@ Created on Mon Sep 22 14:44:51 2014
 
 @author: sblakeley
 """
-
 phantom_menace = """Turmoil has engulfed the Galactic Republic. The\
  taxation of trade routes to outlying star systems is in\
  dispute. Hoping to resolve the matter with a blockade of deadly\
@@ -13,6 +12,5 @@ phantom_menace = """Turmoil has engulfed the Galactic Republic. The\
  endlessly debates this alarming chain of events, the Supreme\
  Chancellor has secretly dispatched two Jedi Knights, the guardians of\
  peace and justice in the galaxy, to settle the conflict"""
- 
 count=str.split(phantom_menace)
 print(len(count))
