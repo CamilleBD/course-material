@@ -9,7 +9,7 @@ alph = (string.ascii_letters)
 
 
 def is_alpha(input):
-    for i in input:
-        if i in alph:
-            return True
-    return False
+    if input.isalpha() is True:
+        return True
+    else:
+        return False

@@ -14,7 +14,7 @@ def is_prime(num):
         return True
 """
 import is_prime
-data = 0 
+data = 0
 for n in range(1000):
     if is_prime.is_prime(n) is True:
         data = data+n

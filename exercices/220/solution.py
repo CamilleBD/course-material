@@ -7,10 +7,12 @@ Created on Wed Sep 24 14:39:34 2014
 
 
 def is_prime(num):
-    for i in range(2, num):
-        if num == 1 or num == 2:
+    for i in range(0, num):
+        if num == 2:
             return True
-        if num % i == 0:
+        if num == 1:
+            return False
+        if i != 0 and num % i == 0:
             return False
     else:
         return True
