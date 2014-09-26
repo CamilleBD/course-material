@@ -10,5 +10,4 @@ def mul(lst):
     total = 1
     for i in range(len(lst)):
         total = lst[i] * total
-    print(total)
     return total
