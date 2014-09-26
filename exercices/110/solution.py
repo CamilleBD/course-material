@@ -8,15 +8,15 @@ import sys
 inp = (sys.argv)
 for i, arg in enumerate(sys.argv):
     if arg == "+":
-        ans = float(inp[1]) + float(inp[3])
+        ans = int(inp[1]) + int(inp[3])
         print(ans)
     elif arg == "-":
-        ans = float(inp[1]) - float(inp[3])
+        ans = int(inp[1]) - int(inp[3])
         print(ans)
     elif arg == "*":
-        ans = float(inp[1]) * float(inp[3])
+        ans = int(inp[1]) * int(inp[3])
         print(ans)
-    elif len(inp) == 1:
+    elif len(inp) == 0 or 1:
         print('a_number', '(an_operator +-*\%^)', 'a_number')
     elif sys.argv[3] == "0" and arg == "/":
         print("input error")
