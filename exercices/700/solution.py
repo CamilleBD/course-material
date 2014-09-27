@@ -1,39 +1,36 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Sep 27 14:15:00 2014
+Created on Sat Sep 27 18:35:51 2014
 
 @author: sblakeley
 """
-
 import numpy as np
 import random
-m = np.zeros((4, 4), dtype=int)
+
+
+def get_rand():
+    x = random.choice([0, 1, 2, 3])
+    y = random.choice([0, 1, 2, 3])
+    return x, y
 
 
 def init_grid():
-    m[random.choice('0123'), random.choice('0123')] = 2
-    m[random.choice('0123'), random.choice('0123')] = 2
-    n = m.tolist()
-    t = n[0].count(2) + n[1].count(2) + n[2].count(2) + n[3].count(2)
-    if t == 2:
-        return m
-grid = init_grid()
-print(grid)
+    grid = np.zeros((4, 4), dtype=int)
+    x, y = get_rand()
+    m, n = get_rand()
+    while (m, n) == (x, y):
+        m, n = get_rand()
+    grid[x, y] = 2
+    grid[m, n] = 2
+    return grid
 
 
 def add_new(grid):
-    a = random.choice('11112')
-    if a == '1':
-        grid[random.choice('0123'), random.choice('0123')] = 2
-        n = grid.tolist()
-        t = n[0].count(2) + n[1].count(2) + n[2].count(2) + n[3].count(2)
-        if t == 3:
-            return grid
-    elif a == '2':
-        grid[random.choice('0123'), random.choice('0123')] = 4
-        n = grid.tolist()
-        t = n[0].count(2) + n[1].count(2) + n[2].count(2) + n[3].count(2)
-        if t == 2:
-            return grid
-grid = add_new(grid)
-print(grid)
+    a = random.choice([2, 2, 2, 2, 4])
+    x, y = get_rand()
+    while grid[x, y] != 0:
+        x, y = get_rand()
+    grid[x, y] = a
+    return grid
+grid = init_grid()
+print(add_new(grid))
